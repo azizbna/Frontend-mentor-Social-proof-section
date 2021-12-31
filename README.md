@@ -32,7 +32,7 @@ Users should be able to:
 
 
 - Solution URL: [Solution](https://github.com/azizbna/Frontend-mentor-Social-proof-section)
-- Live Site URL: [Live site](https://azizbna.github.io/Frontend-mentor-Social-proof-section/){:target="_blank"}
+- Live Site URL: [Live site](https://azizbna.github.io/Frontend-mentor-Social-proof-section/)
 
 ## My process
 
