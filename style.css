@@ -18,11 +18,14 @@ html {
 body {
     font-size: 15px;
     font-family: 'Spartan', sans-serif;
+    background: url(./images/bg-pattern-top-desktop.svg) left top no-repeat, url(./images/bg-pattern-bottom-desktop.svg) right bottom no-repeat;
+    background-size: 40%,75%;
 }
 
 main {
     width: inherit;
-    height: inherit;
+    height: calc(100% - 2vh);
+    /*Substracted 2vh for the attribution*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,9 +43,7 @@ main {
 
 /*Description*/
 
-.description {
-    background: rgb(255, 255, 255);
-}
+
 
 .description h1 {
     color: var(--dark-magenta);
@@ -63,7 +64,6 @@ main {
 
 /* Ratings*/
 .ratings {
-    background-color: white;
     display: flex;
     flex-flow: column;
     align-items: flex-end;
@@ -155,6 +155,15 @@ div.review:nth-of-type(2) {
     margin-left: 20px;
 }
 
+.attribution {
+    font-size: 1vh;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
 @media only screen and (max-width:1180px) {
     main {
         transform: scale(0.8);
@@ -170,10 +179,16 @@ div.review:nth-of-type(2) {
 @media only screen and (max-width:960px) {
     body {
         text-align: center;
+        background: url(./images/bg-pattern-top-mobile.svg) left top no-repeat, url(./images/bg-pattern-bottom-mobile.svg) right bottom no-repeat;
+        background-size: 100%,60%;
     }
+    
 
     main {
-        transform: scale(0.9);
+        transform: scale(1);
+        height: 1550px;
+        display: flex;
+        align-items: flex-start;
 
     }
 
@@ -185,26 +200,26 @@ div.review:nth-of-type(2) {
         grid-template-rows: repeat(3, 1fr)
     }
 
+    div.description h1,
+    div.description p {
+        margin-inline: auto;
+    }
+
     .description h1 {
         width: 100%;
+        font-size: 2em;
     }
 
     .description p {
-        color: var(--dark-grayish-magenta);
-        font-size: 1em;
+        font-size: 12px;
+        margin-top: 25px;
         width: 100%;
         font-weight: 500;
-        line-height: 1.8em;
+        line-height: 1.5em;
     }
 
-    .card-section {
-        grid-column: span 1;
-    }
 
-    div.description h1,
-    div.description p {
-        margin: auto;
-    }
+
 
     .ratings {
         align-items: center;
@@ -212,24 +227,36 @@ div.review:nth-of-type(2) {
 
     .review::before {
         display: block;
-        margin: 10px 0 10px 0px;
+        margin: 0px 0 10px 0px;
     }
 
     .review {
         width: 100%;
     }
 
+
     div.review:nth-of-type(1),
     div.review:nth-of-type(2) {
         margin-right: 0;
     }
 
+    div.review:nth-of-type(1) {
+        margin-top: 0;
+    }
+
+    .card:first-child {
+        margin-left: 15px;
+    }
+
     .card-section {
         flex-direction: column;
+        grid-column: span 1;
         align-items: center;
     }
 
     .card {
         width: 100%;
+        padding-inline: 20px;
+        text-align: left;
     }
 }
