@@ -72,8 +72,6 @@ main {
 /*--------*/
 /*Description*/
 
-
-
 .description h1 {
     color: var(--dark-magenta);
     width: 80%;
@@ -92,6 +90,7 @@ main {
 }
 
 /* Ratings*/
+
 .ratings {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -113,16 +112,15 @@ div.review:nth-of-type(2) {
     margin-right: 60px;
 }
 
- .review::before {
-        content: url(./images/icon-star.svg)
-                 url(./images/icon-star.svg)
-                 url(./images/icon-star.svg)
-                 url(./images/icon-star.svg)
-                 url(./images/icon-star.svg);
-        margin: 0px 30px 0px 20px;
-        display: inline-flex;
-        gap: 0.5em;
- }
+.review::before {
+    content: url(./images/icon-star.svg) ' '
+             url(./images/icon-star.svg) ' '
+             url(./images/icon-star.svg) ' '
+             url(./images/icon-star.svg) ' '
+             url(./images/icon-star.svg);
+    margin: 0px 30px 0px 20px;
+    word-spacing: .3rem;
+}
 
 .review {
     background-color: var(--light-grayish-magenta);
@@ -290,9 +288,6 @@ div.review:nth-of-type(2) {
         line-height: 1.5em;
     }
 
-
-
-
     .ratings {
         -webkit-box-align: center;
         -ms-flex-align: center;
@@ -301,9 +296,8 @@ div.review:nth-of-type(2) {
 
     .review::before {
         display: flex;
-        margin: 0px 0 10px 0px;
-        gap: 1rem;
         justify-content: center;
+        margin: 0px 0 10px 0px;
     }
 
     .review {
